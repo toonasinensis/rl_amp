@@ -40,7 +40,6 @@ from isaacgym import gymtorch, gymapi, gymutil
 import torch
 from torch import Tensor
 from typing import Tuple, Dict
-
 from legged_gym import LEGGED_GYM_ROOT_DIR
 from legged_gym.envs.base.base_task import BaseTask
 from legged_gym.utils.terrain import Terrain
@@ -49,6 +48,7 @@ from legged_gym.utils.helpers import class_to_dict
 from .legged_robot_config import LeggedRobotCfg
 import legged_gym.utils.kinematics.urdf as pk
 from rsl_rl.datasets.motion_loader import AMPLoader
+
 
 class LeggedRobot(BaseTask):
     def __init__(self, cfg: LeggedRobotCfg, sim_params, physics_engine, sim_device, headless):
@@ -505,6 +505,7 @@ class LeggedRobot(BaseTask):
         """
         # base position
         root_pos = AMPLoader.get_root_pos_batch(frames)
+        print("root_pos",root_pos)
         root_pos[:, :2] = root_pos[:, :2] + self.env_origins[env_ids, :2]
         self.root_states[env_ids, :3] = root_pos
         # base velocities
@@ -512,7 +513,7 @@ class LeggedRobot(BaseTask):
         self.root_states[env_ids, 3:7] = root_orn
         self.root_states[env_ids, 7:10] = quat_rotate(root_orn, AMPLoader.get_linear_vel_batch(frames))
         self.root_states[env_ids, 10:13] = quat_rotate(root_orn, AMPLoader.get_angular_vel_batch(frames))
-
+        print("self.root_states",self.root_states)
         env_ids_int32 = env_ids.to(dtype=torch.int32)
         self.gym.set_actor_root_state_tensor_indexed(self.sim,
                                                      gymtorch.unwrap_tensor(self.root_states),

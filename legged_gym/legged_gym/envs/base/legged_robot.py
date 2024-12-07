@@ -121,7 +121,7 @@ class LeggedRobot(BaseTask):
 
         self._post_physics_step_callback()
 
-        # compute observations, rewards, resets, ...
+        # compute observations, rewards, resets, ...f
         self.check_termination()
         self.compute_reward()
         env_ids = self.reset_buf.nonzero(as_tuple=False).flatten()

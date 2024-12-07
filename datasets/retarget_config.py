@@ -43,17 +43,24 @@ HL_FOOT_NAME = "RL_foot"
 
 MOCAP_MOTIONS = [
     # Output motion name, input file, frame start, frame end, motion weight.
-    ["pace0", "datasets/keypoint_datasets/ai4animation/dog_walk00_joint_pos.txt", 162, 201, 1],
-    ["pace1", "datasets/keypoint_datasets/ai4animation/dog_walk00_joint_pos.txt", 201, 400, 1],
-    ["pace2", "datasets/keypoint_datasets/ai4animation/dog_walk00_joint_pos.txt", 400, 600, 1],
-    ["trot0", "datasets/keypoint_datasets/ai4animation/dog_walk03_joint_pos.txt", 448, 481, 1],
-    ["trot1", "datasets/keypoint_datasets/ai4animation/dog_walk03_joint_pos.txt", 400, 600, 1],
-    ["trot2", "datasets/keypoint_datasets/ai4animation/dog_run04_joint_pos.txt", 480, 663, 1],
-    ["canter0", "datasets/keypoint_datasets/ai4animation/dog_run00_joint_pos.txt", 430, 480, 1],
-    ["canter1", "datasets/keypoint_datasets/ai4animation/dog_run00_joint_pos.txt", 380, 430, 1],
-    ["canter2", "datasets/keypoint_datasets/ai4animation/dog_run00_joint_pos.txt", 480, 566, 1],
-    ["right_turn0", "datasets/keypoint_datasets/ai4animation/dog_walk09_joint_pos.txt", 1085, 1124, 1.5],
-    ["right_turn1", "datasets/keypoint_datasets/ai4animation/dog_walk09_joint_pos.txt", 560, 670, 1.5],
-    ["left_turn0", "datasets/keypoint_datasets/ai4animation/dog_walk09_joint_pos.txt", 2404, 2450, 1.5],
-    ["left_turn1", "datasets/keypoint_datasets/ai4animation/dog_walk09_joint_pos.txt", 120, 220, 1.5]
+    ["pace0", "datasets/mocap_motions_a1/dog_walk00_joint_pos.txt", 162, 201, 1],
+    ["pace1", "datasets/mocap_motions_a1/dog_walk00_joint_pos.txt", 201, 400, 1],
+    ["pace2", "datasets/mocap_motions_a1/dog_walk00_joint_pos.txt", 400, 600, 1],
+    ["trot0", "datasets/mocap_motions_a1/dog_walk03_joint_pos.txt", 448, 481, 1],
+    ["trot1", "datasets/mocap_motions_a1/dog_walk03_joint_pos.txt", 400, 600, 1],
+    ["trot2", "datasets/mocap_motions_a1/dog_run04_joint_pos.txt", 480, 663, 1],
+    ["canter0", "datasets/mocap_motions_a1/dog_run00_joint_pos.txt", 430, 480, 1],
+    ["canter1", "datasets/mocap_motions_a1/dog_run00_joint_pos.txt", 380, 430, 1],
+    ["canter2", "datasets/mocap_motions_a1/dog_run00_joint_pos.txt", 480, 566, 1],
+    ["right_turn0", "datasets/mocap_motions_a1/dog_walk09_joint_pos.txt", 1085, 1124, 1.5],
+    ["right_turn1", "datasets/mocap_motions_a1/dog_walk09_joint_pos.txt", 560, 670, 1.5],
+    ["left_turn0", "datasets/mocap_motions_a1/dog_walk09_joint_pos.txt", 2404, 2450, 1.5],
+    ["left_turn1", "datasets/mocap_motions_a1/dog_walk09_joint_pos.txt", 120, 220, 1.5]
+]
+
+MOCAP_MOTIONS_TEST_A1 = [
+    # Output motion name, input file, frame start, frame end, motion weight.
+    ["pace0", "datasets/mocap_motions_a1/pace0.txt", 162, 201, 1],
+    ["pace1", "datasets/mocap_motions_a1/pace1.txt", 201, 400, 1],
+    ["pace2", "datasets/mocap_motions_a1/pace2.txt", 400, 600, 1],
 ]

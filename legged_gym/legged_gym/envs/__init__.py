@@ -40,6 +40,7 @@ from .cassie.cassie import Cassie
 from .cassie.cassie_config import CassieRoughCfg, CassieRoughCfgPPO
 from .a1.a1_config import A1RoughCfg, A1RoughCfgPPO
 from .a1.a1_amp_config import A1AMPCfg, A1AMPCfgPPO
+from .lite3.lite3_amp_config import Lite3AMPCfg, Lite3AMPCfgPPO
 
 
 import os
@@ -52,3 +53,4 @@ task_registry.register( "anymal_b", Anymal, AnymalBRoughCfg(), AnymalBRoughCfgPP
 task_registry.register( "a1", LeggedRobot, A1RoughCfg(), A1RoughCfgPPO() )
 task_registry.register( "a1_amp", LeggedRobotAMP, A1AMPCfg(), A1AMPCfgPPO() )
 task_registry.register( "cassie", Cassie, CassieRoughCfg(), CassieRoughCfgPPO() )
+task_registry.register( "lite3_amp", LeggedRobotAMP, Lite3AMPCfg(), Lite3AMPCfgPPO() )

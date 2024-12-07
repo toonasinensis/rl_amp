@@ -36,7 +36,7 @@ MOTION_FILES = glob.glob('datasets/mocap_motions_a1/*')
 class A1AMPCfg( LeggedRobotCfg ):
 
     class env( LeggedRobotCfg.env ):
-        num_envs = 4096
+        num_envs = 40
         num_observations = 42
         num_privileged_obs = 48
         reference_state_initialization = True
